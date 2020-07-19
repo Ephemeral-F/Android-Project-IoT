@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e3e3"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <FrameLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#04c9e2">
+
+        <LinearLayout
+            android:id="@+id/id_mainbody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <!-- 1.IP 地址和其输入框 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:paddingLeft="5dp"
+                    android:text="服务器ip地址"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/id_edt_inputIP"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="5dp"
+                    android:hint="127.0.0.1"
+                    android:inputType="text" />
+            </LinearLayout>
+            <!-- 2.端口号和其输入框 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:textColor="@android:color/black"
+                    android:text="端口地址"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/id_edt_inputport"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="5dp"
+                    android:hint="8080"
+                    android:inputType="number" />
+
+            </LinearLayout>
+            <!-- 3.连接、关闭按钮和其指示灯. -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/id_btn_connect"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="连接" />
+
+                <Button
+                    android:id="@+id/id_btn_return"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/retgrid" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/id_edt_sendArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:focusable="true"
+                    android:gravity="top"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="3dp"
+                    android:hint="发送区"
+                    android:minLines="3">
+
+                    <requestFocus />
+                </EditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/id_btn_send"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="发送" />
+
+                <Button
+                    android:id="@+id/id_btn_clean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="清除" />
+            </LinearLayout>
+x
+            <ScrollView
+                android:id="@+id/ScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/id_edt_input"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:gravity="top"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="3dp"
+                        android:hint="接收显示区"
+                        android:lines="8"
+                        android:scrollbars="vertical" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonjieshou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16进制接收" />
+
+                <Button
+                    android:id="@+id/buttonfasong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16进制发送" />
+
+                <Button
+                    android:id="@+id/button_clean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="      清除      " />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

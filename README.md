@@ -21,13 +21,17 @@ Android 4.0及以上
 
 ### 目录结构描述
 
+```
+
 ├── README.md                   // help
 
-├── app-debug.apk              // 应用安装包
+├── app-debug.apk               // 应用安装包
 
-├── demo_video.mp4          // 演示视频
+├── demo_video.mp4              // 演示视频
 
-├── report.pdf                      // 实验报告
+├── report.pdf                  // 实验报告
 
-└── IoT_Debugger               // 工程文件
+└── IoT_Debugger                // 工程文件
+
+```
 
